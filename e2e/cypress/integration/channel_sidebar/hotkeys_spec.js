@@ -45,9 +45,9 @@ describe('Channel switching', () => {
         // # Press alt + up
         cy.get('body').type('{alt}', {release: false}).type('{uparrow}').type('{alt}', {release: true});
 
-        // * Verify that the channel changed to the Off-Topic channel
+        // * Verify that the channel changed to the Random channel
         cy.url().should('include', `/${teamName}/channels/off-topic`);
-        cy.get('#channelHeaderTitle').should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle').should('contain', 'Random');
 
         // # Press alt + down
         cy.get('body').type('{alt}', {release: false}).type('{downarrow}').type('{alt}', {release: true});

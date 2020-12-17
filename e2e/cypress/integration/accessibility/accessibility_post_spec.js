@@ -253,7 +253,7 @@ describe('Verify Accessibility Support in Post', () => {
 
     it('MM-T1462 Verify incoming messages are read', () => {
         // # Make channel as read by switching back and forth to testChannel
-        cy.get('#sidebarChannelContainer').should('be.visible').findByText('Off-Topic').click();
+        cy.get('#sidebarChannelContainer').should('be.visible').findByText('Random').click();
         cy.get('#postListContent', {timeout: TIMEOUTS.ONE_MIN}).should('be.visible');
         cy.get('#sidebarChannelContainer').should('be.visible').findByText(testChannel.display_name).click();
         cy.get('#postListContent', {timeout: TIMEOUTS.ONE_MIN}).should('be.visible');

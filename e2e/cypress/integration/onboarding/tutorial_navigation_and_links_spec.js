@@ -72,13 +72,13 @@ describe('Test Tutorial Navigation', () => {
             cy.request(href).its('status').should('equal', 200);
         });
 
-        //* Check the Off-Topic sidebar link to ensure it is not active.
+        //* Check the Random sidebar link to ensure it is not active.
         cy.get('#sidebarItem_off-topic').parent().should('not.have.class', 'active');
 
-        // # Click the Off-Topic sidebar link
+        // # Click the Random sidebar link
         cy.get('#sidebarItem_off-topic').click();
 
-        // * Verify the Off-Topic sidebar link is now active.
+        // * Verify the Random sidebar link is now active.
         cy.get('#sidebarItem_off-topic').parent().should('have.class', 'active');
 
         // * Verify that the second step of the tutorial still displays:
@@ -93,7 +93,7 @@ describe('Test Tutorial Navigation', () => {
         // # Click the Next button.
         cy.get('#tutorialNextButton').click();
 
-        // * Verify that the Off-Topic channel displays.
+        // * Verify that the Random channel displays.
         checkOffTopicChannel();
 
         // # Log in as another new user with the tutorial bypass flag set to false.
@@ -161,11 +161,11 @@ function checkStepThree() {
 }
 
 /**
-*    This function checks to see if the Off-Topic channel displays by the header info and the post box.
+*    This function checks to see if the Random channel displays by the header info and the post box.
 */
 
 function checkOffTopicChannel() {
-    cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Off-Topic');
+    cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Random');
     cy.get('#post_textbox').should('be.visible');
 }
 

@@ -43,7 +43,7 @@ describe('Autocomplete without Elasticsearch - Channel', () => {
         createPrivateChannel(testTeam.id).then((channel) => {
             // # Go to off-topic channel to partially reload the page
             cy.get('#sidebarChannelContainer').should('be.visible').within(() => {
-                cy.findAllByText('Off-Topic').should('be.visible').click();
+                cy.findAllByText('Random').should('be.visible').click();
             });
 
             // # Search for the private channel
@@ -58,7 +58,7 @@ describe('Autocomplete without Elasticsearch - Channel', () => {
     it('private channel I do belong to appears', () => {
         // # Go to off-topic channel to partially reload the page
         cy.get('#sidebarChannelContainer').should('be.visible').within(() => {
-            cy.findAllByText('Off-Topic').should('be.visible').click();
+            cy.findAllByText('Random').should('be.visible').click();
         });
 
         // # Create private channel and add new user to it (sets @privateChannel alias)
@@ -97,7 +97,7 @@ describe('Autocomplete without Elasticsearch - Channel', () => {
             createPrivateChannel(teamResponse.data.id).then((channel) => {
                 // # Go to off-topic channel to partially reload the page
                 cy.get('#sidebarChannelContainer').should('be.visible').within(() => {
-                    cy.findAllByText('Off-Topic').should('be.visible').click();
+                    cy.findAllByText('Random').should('be.visible').click();
                 });
 
                 // # Search for the private channel

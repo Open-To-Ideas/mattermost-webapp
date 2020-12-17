@@ -39,11 +39,11 @@ describe('Channel sidebar', () => {
         cy.get('#headerTeamName').should('be.visible').should('be.visible').should('contain', teamName);
 
         // # Click on Off Topic
-        cy.get('.SidebarChannel:contains(Off-Topic)').should('be.visible').click();
+        cy.get('.SidebarChannel:contains(Random)').should('be.visible').click();
 
         // * Verify that the channel changed
         cy.url().should('include', `/${teamName}/channels/off-topic`);
-        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Random');
 
         // # Click on Town Square
         cy.get('.SidebarChannel:contains(Town Square)').should('be.visible').click();
@@ -61,7 +61,7 @@ describe('Channel sidebar', () => {
         cy.get('#headerTeamName').should('be.visible').should('contain', teamName);
 
         // * Verify that both Off Topic and Town Square are read
-        cy.get('.SidebarChannel:not(.unread):contains(Off-Topic)').should('be.visible');
+        cy.get('.SidebarChannel:not(.unread):contains(Random)').should('be.visible');
         cy.get('.SidebarChannel:not(.unread):contains(Town Square)').should('be.visible');
 
         // # Have another user post in the Off Topic channel
@@ -70,7 +70,7 @@ describe('Channel sidebar', () => {
         });
 
         // * Verify that Off Topic is unread and Town Square is read
-        cy.get('.SidebarChannel.unread:contains(Off-Topic)').should('be.visible');
+        cy.get('.SidebarChannel.unread:contains(Random)').should('be.visible');
         cy.get('.SidebarChannel:not(.unread):contains(Town Square)').should('be.visible');
     });
 
@@ -86,7 +86,7 @@ describe('Channel sidebar', () => {
         cy.visit(`/${teamName}/channels/off-topic`);
 
         // # Wait for the channel to change
-        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Random');
 
         // # Click on the channel menu and select Leave Channel
         cy.get('#channelHeaderTitle').click();
@@ -96,7 +96,7 @@ describe('Channel sidebar', () => {
         verifyChannelSwitch('Town Square', `/${teamName}/channels/town-square`);
 
         // * Verify that Off Topic has disappeared from the sidebar
-        cy.get('.SidebarChannel:contains(Off-Topic)').should('not.exist');
+        cy.get('.SidebarChannel:contains(Random)').should('not.exist');
     });
 
     it('MM-T1684 should remove channel from sidebar after deleting it', () => {
@@ -111,7 +111,7 @@ describe('Channel sidebar', () => {
         cy.visit(`/${teamName}/channels/off-topic`);
 
         // # Wait for the channel to change
-        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('be.visible').should('contain', 'Random');
 
         // # Click on the channel menu and select Archive Channel
         cy.get('#channelHeaderTitle').click();
@@ -122,7 +122,7 @@ describe('Channel sidebar', () => {
         verifyChannelSwitch('Town Square', `/${teamName}/channels/town-square`);
 
         // * Verify that Off Topic has disappeared from the sidebar
-        cy.get('.SidebarChannel:contains(Off-Topic)').should('not.exist');
+        cy.get('.SidebarChannel:contains(Random)').should('not.exist');
     });
 
     function verifyChannelSwitch(displayName, url) {

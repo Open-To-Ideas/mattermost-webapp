@@ -112,11 +112,11 @@ describe('Messaging', () => {
         //* Verify channel switcher is visible
         cy.get('#quickSwitchHint').should('be.visible');
 
-        //# Type channel name 'Off-Topic' and select it
-        cy.get('#quickSwitchInput').type('Off-Topic').wait(TIMEOUTS.HALF_SEC).type('{enter}');
+        //# Type channel name 'Random' and select it
+        cy.get('#quickSwitchInput').type('Random').wait(TIMEOUTS.HALF_SEC).type('{enter}');
 
-        //* Verify that it redirected into selected channel 'Off-Topic'
-        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Off-Topic');
+        //* Verify that it redirected into selected channel 'Random'
+        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Random');
 
         //* Verify focus is moved to main input box when the channel is opened
         cy.get('#post_textbox').should('be.focused');

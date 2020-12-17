@@ -62,7 +62,7 @@ describe('component/legacy_sidebar/sidebar_channel/SidebarChannel', () => {
         currentUserId: 'user-id',
         showTutorialTip: false,
         townSquareDisplayName: 'Town Square',
-        offTopicDisplayName: 'Off-Topic',
+        offTopicDisplayName: 'Random',
         membersCount: 8,
         showUnreadForMsgs: true,
         shouldHideChannel: false,

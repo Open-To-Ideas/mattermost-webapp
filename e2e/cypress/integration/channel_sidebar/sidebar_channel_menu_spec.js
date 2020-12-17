@@ -49,7 +49,7 @@ describe('Sidebar channel menu', () => {
 
         // # Switch to the Off Topic channel
         cy.get('#sidebarItem_off-topic').click();
-        cy.get('#channelHeaderTitle').should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle').should('contain', 'Random');
 
         // # Have another user send a message in the Town Square
         cy.get('@townSquareId').then((channelId) => {

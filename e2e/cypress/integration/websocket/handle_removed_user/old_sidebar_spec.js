@@ -33,10 +33,10 @@ describe('Handle removed user - old sidebar', () => {
         createNewTeamAndMoveToOffTopic(teamName, sidebarItemClass);
 
         removeMeFromCurrentChannel().then(() => {
-            // * Verify that the channel changed back to Town Square and that Off-Topic has been removed
+            // * Verify that the channel changed back to Town Square and that Random has been removed
             cy.url().should('include', `/${teamName}/channels/town-square`);
             cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
-            cy.get(`${sidebarItemClass}:contains(Off-Topic)`).should('not.exist');
+            cy.get(`${sidebarItemClass}:contains(Random)`).should('not.exist');
         });
     });
 

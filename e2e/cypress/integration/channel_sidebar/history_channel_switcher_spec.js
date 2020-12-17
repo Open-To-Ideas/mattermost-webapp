@@ -50,15 +50,15 @@ describe('Channel sidebar', () => {
         // # Click the Channel Switcher button
         cy.get('.SidebarChannelNavigator_jumpToButton').should('be.visible').click();
 
-        // # Search for Off-Topic and press Enter
-        cy.get('.channel-switcher__suggestion-box #quickSwitchInput').click().type('Off-Topic');
+        // # Search for Random and press Enter
+        cy.get('.channel-switcher__suggestion-box #quickSwitchInput').click().type('Random');
         cy.get('.channel-switcher__suggestion-box #suggestionList').should('be.visible');
         cy.get('.channel-switcher__suggestion-box #quickSwitchInput').type('{enter}');
 
-        // * Verify that the channel switcher is closed and the active channel is now Off-Topic
+        // * Verify that the channel switcher is closed and the active channel is now Random
         cy.get('.channel-switch__modal').should('not.be.visible');
         cy.url().should('include', `/${teamName}/channels/off-topic`);
-        cy.get('#channelHeaderTitle').should('contain', 'Off-Topic');
-        cy.get('.SidebarChannel.active:contains(Off-Topic)').should('be.visible');
+        cy.get('#channelHeaderTitle').should('contain', 'Random');
+        cy.get('.SidebarChannel.active:contains(Random)').should('be.visible');
     });
 });

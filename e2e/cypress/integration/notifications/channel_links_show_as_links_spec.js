@@ -42,7 +42,7 @@ describe('Notifications', () => {
             cy.findByText('Offline').should('be.visible').click();
             cy.apiLogout();
 
-            // # Login as sysadmin and go to the Off-Topic channel
+            // # Login as sysadmin and go to the Random channel
             cy.apiAdminLogin();
             cy.visit(`/${testTeam.name}/channels/off-topic`);
         });
@@ -117,7 +117,7 @@ describe('Notifications', () => {
         const bodyText = splitEmailBodyText(data.body.text);
         expect(bodyText.length).to.equal(16);
         expect(bodyText[1]).to.equal('You have a new notification.');
-        expect(bodyText[4]).to.equal('Channel: Off-Topic');
+        expect(bodyText[4]).to.equal('Channel: Random');
         expect(bodyText[5]).to.contain('@sysadmin');
         expect(bodyText[7]).to.equal(`This is a message in ~${channelName} ( ${baseUrl}/landing#/${teamName}/channels/${channelName} ) channel for @${otherUser.username}`);
         expect(bodyText[9]).to.equal(`Go To Post ( ${baseUrl}/landing#/${teamName}/pl/${lastPostId} )`);

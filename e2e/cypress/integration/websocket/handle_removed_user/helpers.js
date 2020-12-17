@@ -15,11 +15,11 @@ export function createNewTeamAndMoveToOffTopic(teamName, sidebarItemClass) {
     cy.get('#headerTeamName').should('be.visible').should('be.visible').should('contain', teamName);
 
     // # Click on Off Topic
-    cy.get(`${sidebarItemClass}:contains(Off-Topic)`).should('be.visible').click();
+    cy.get(`${sidebarItemClass}:contains(Random)`).should('be.visible').click();
 
     // * Verify that the channel changed
     cy.url().should('include', `/${teamName}/channels/off-topic`);
-    cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Off-Topic');
+    cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Random');
 }
 
 export function removeMeFromCurrentChannel() {
@@ -41,8 +41,8 @@ export function verifyRHS(teamName, sidebarItemClass, postId) {
     cy.url().should('include', `/${teamName}/channels/town-square`);
     cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
 
-    // * Verify that Off-Topic has been removed
-    cy.get(`${sidebarItemClass}:contains(Off-Topic)`).should('not.exist');
+    // * Verify that Random has been removed
+    cy.get(`${sidebarItemClass}:contains(Random)`).should('not.exist');
 
     // * Verify that the recently posted message is no longer in the RHS
     cy.get(`#rhsPostMessageText_${postId}`).should('not.exist');

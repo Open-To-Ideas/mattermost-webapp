@@ -107,7 +107,7 @@ describe('Teams Suite', () => {
             cy.findByText(/Invite Members/).should('be.visible').click();
             cy.findByText(/Done/).should('be.visible').click();
 
-            // * As sysadmin, verify system message posts in Town Square and Off-Topic
+            // * As sysadmin, verify system message posts in Town Square and Random
             cy.getLastPost().wait(TIMEOUTS.HALF_SEC).then(($el) => {
                 cy.wrap($el).get('.user-popover').
                     should('be.visible').
@@ -138,7 +138,7 @@ describe('Teams Suite', () => {
 
             const sysadmin = getAdminAccount();
 
-            // * As other user, verify system message posts in Town Square and Off-Topic
+            // * As other user, verify system message posts in Town Square and Random
             cy.getLastPost().wait(TIMEOUTS.HALF_SEC).then(($el) => {
                 cy.wrap($el).get('.user-popover').
                     should('be.visible').

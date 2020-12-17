@@ -52,7 +52,7 @@ describe('Incoming webhook', () => {
         cy.get('.backstage-form').should('be.visible').within(() => {
             cy.get('#displayName').type('Webhook Title');
             cy.get('#description').type('Webhook Description');
-            cy.get('#channelSelect').select('Off-Topic');
+            cy.get('#channelSelect').select('Random');
             cy.findByText('Save').scrollIntoView().click();
         });
 

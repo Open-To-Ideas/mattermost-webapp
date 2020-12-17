@@ -77,10 +77,10 @@ describe('Verify Accessibility Support in Modals & Dialogs', () => {
         cy.visit(`/${testTeam.name}/channels/off-topic`);
 
         // * Verify the accessibility support in Channel Edit Header Dialog
-        verifyChannelMenuModal('Edit Channel Header', 'Edit Header for Off-Topic', 'editChannelHeaderModalLabel');
+        verifyChannelMenuModal('Edit Channel Header', 'Edit Header for Random', 'editChannelHeaderModalLabel');
 
         // * Verify the accessibility support in Channel Edit Purpose Dialog
-        verifyChannelMenuModal('Edit Channel Purpose', 'Edit Purpose for Off-Topic', 'editChannelPurposeModalLabel');
+        verifyChannelMenuModal('Edit Channel Purpose', 'Edit Purpose for Random', 'editChannelPurposeModalLabel');
 
         // * Verify the accessibility support in Rename Channel Dialog
         verifyChannelMenuModal('Rename Channel', 'Rename Channel', 'renameChannelModalLabel');
@@ -244,7 +244,7 @@ describe('Verify Accessibility Support in Modals & Dialogs', () => {
 
         // * Verify the accessibility support in Manage Members Dialog`
         cy.get('#channelMembersModal').should('have.attr', 'role', 'dialog').and('have.attr', 'aria-labelledby', 'channelMembersModalLabel').within(() => {
-            cy.get('#channelMembersModalLabel').should('be.visible').and('contain', 'Off-Topic Members');
+            cy.get('#channelMembersModalLabel').should('be.visible').and('contain', 'Random Members');
             cy.get('.modal-header button.close').should('have.attr', 'aria-label', 'Close');
 
             // * Verify the accessibility support in search input

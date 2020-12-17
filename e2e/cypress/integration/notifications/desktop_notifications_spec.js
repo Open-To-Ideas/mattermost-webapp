@@ -69,7 +69,7 @@ describe('Desktop notifications', () => {
             // # Ensure notifications are set up to fire a desktop notification if are mentioned.
             changeDesktopNotificationSettingsAs('#desktopNotificationMentions');
 
-            cy.apiGetChannelByName(testTeam.name, 'Off-Topic').then(({channel}) => {
+            cy.apiGetChannelByName(testTeam.name, 'Random').then(({channel}) => {
                 // # Logout the user.
                 cy.apiLogout().wait(TIMEOUTS.TEN_SEC);
 
@@ -143,13 +143,13 @@ describe('Desktop notifications', () => {
             // # Ensure notifications are set up to fire a desktop notification if are mentioned.
             changeDesktopNotificationSettingsAs('#desktopNotificationAllActivity');
 
-            cy.apiGetChannelByName(testTeam.name, 'Off-Topic').then(({channel}) => {
+            cy.apiGetChannelByName(testTeam.name, 'Random').then(({channel}) => {
                 // # Have another user send a post.
                 cy.postMessageAs({sender: testUser, message: actualMsg, channelId: channel.id});
 
                 // * Desktop notification should be received with expected body.
                 cy.wait(TIMEOUTS.HALF_SEC);
-                cy.get('@withNotification').should('have.been.calledWithMatch', 'Off-Topic', (args) => {
+                cy.get('@withNotification').should('have.been.calledWithMatch', 'Random', (args) => {
                     expect(args.body, `Notification body: "${args.body}" should match: "${expected}"`).to.equal(expected);
                     return true;
                 });
@@ -202,13 +202,13 @@ describe('Desktop notifications', () => {
             // # Ensure notifications are set up to fire a desktop notification for all activity.
             changeDesktopNotificationSettingsAs('#desktopNotificationAllActivity');
 
-            cy.apiGetChannelByName(testTeam.name, 'Off-Topic').then(({channel}) => {
+            cy.apiGetChannelByName(testTeam.name, 'Random').then(({channel}) => {
                 // # Have another user send a post.
                 cy.postMessageAs({sender: testUser, message: actualMsg, channelId: channel.id});
 
                 // * Desktop notification should be received with expected body.
                 cy.wait(TIMEOUTS.HALF_SEC);
-                cy.get('@withNotification').should('have.been.calledWithMatch', 'Off-Topic', (args) => {
+                cy.get('@withNotification').should('have.been.calledWithMatch', 'Random', (args) => {
                     expect(args.body, `Notification body: "${args.body}" should match: "${expected}"`).to.equal(expected);
                     return true;
                 });

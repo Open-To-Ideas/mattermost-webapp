@@ -67,7 +67,7 @@ describe('Channel sidebar', () => {
         cy.visit(`/${teamName}/channels/off-topic`);
 
         // # Wait for the channel to change
-        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('contain', 'Off-Topic');
+        cy.get('#channelHeaderTitle', {timeout: TIMEOUTS.HALF_MIN}).should('contain', 'Random');
 
         // # Click on the channel menu and select Leave Channel
         cy.get('#channelHeaderTitle').click();
@@ -86,13 +86,13 @@ describe('Channel sidebar', () => {
         // * Verify that the more channels modal is visible
         cy.get('.more-modal').should('be.visible');
 
-        // Click the Off-Topic channel
-        cy.get('.more-modal button:contains(Off-Topic)').should('be.visible').click();
+        // Click the Random channel
+        cy.get('.more-modal button:contains(Random)').should('be.visible').click();
 
         // Verify that new channel is in the sidebar and is active
         cy.get('.more-modal').should('not.be.visible');
         cy.url().should('include', `/${teamName}/channels/off-topic`);
-        cy.get('#channelHeaderTitle').should('contain', 'Off-Topic');
-        cy.get('.SidebarChannel.active:contains(Off-Topic)').should('be.visible');
+        cy.get('#channelHeaderTitle').should('contain', 'Random');
+        cy.get('.SidebarChannel.active:contains(Random)').should('be.visible');
     });
 });

@@ -115,7 +115,7 @@ exports[`component/legacy_sidebar/SidebarTutorialTip should match snapshot, with
             id="sidebar.tutorialScreen2.title"
             values={
               Object {
-                "offtopic": "Off-Topic",
+                "offtopic": "Random",
                 "townsquare": "TestTownSquare",
               }
             }
@@ -144,7 +144,7 @@ exports[`component/legacy_sidebar/SidebarTutorialTip should match snapshot, with
             id="sidebar.tutorialScreen2.body3"
             values={
               Object {
-                "offtopic": "Off-Topic",
+                "offtopic": "Random",
               }
             }
           />
@@ -291,7 +291,7 @@ exports[`component/legacy_sidebar/SidebarTutorialTip should match snapshot, with
             id="sidebar.tutorialScreen2.title"
             values={
               Object {
-                "offtopic": "Off-Topic",
+                "offtopic": "Random",
                 "townsquare": "Town Square",
               }
             }
@@ -320,7 +320,7 @@ exports[`component/legacy_sidebar/SidebarTutorialTip should match snapshot, with
             id="sidebar.tutorialScreen2.body3"
             values={
               Object {
-                "offtopic": "Off-Topic",
+                "offtopic": "Random",
               }
             }
           />

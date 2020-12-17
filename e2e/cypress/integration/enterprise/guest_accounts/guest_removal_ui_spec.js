@@ -17,7 +17,7 @@ import * as TIMEOUTS from '../../../fixtures/timeouts';
 
 function removeUserFromAllChannels(verifyAlert, user) {
     // # Remove the Guest user from all channels of a team as a sysadmin
-    const channels = ['Town Square', 'Off-Topic'];
+    const channels = ['Town Square', 'Random'];
 
     // # Always click on the Town Square channel first
     cy.get('#sidebarItem_town-square').click({force: true});

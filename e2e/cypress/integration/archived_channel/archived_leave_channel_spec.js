@@ -247,13 +247,13 @@ describe('Leave an archived channel', () => {
         cy.apiLogout();
         cy.apiLogin(otherUser);
         cy.visit(`/${testTeam.name}/channels/off-topic`);
-        cy.contains('#channelHeaderTitle', 'Off-Topic');
+        cy.contains('#channelHeaderTitle', 'Random');
         createArchivedChannel({prefix: otherChannelName}, [`some text message ${getRandomId()}`]).then(() => {
             // # As the test user, select CTRL/CMD+K (or ⌘+k) to open the channel switcher
             cy.apiLogout();
             cy.apiLogin(testUser);
             cy.visit(`/${testTeam.name}/channels/off-topic`);
-            cy.contains('#channelHeaderTitle', 'Off-Topic');
+            cy.contains('#channelHeaderTitle', 'Random');
             cy.typeCmdOrCtrl().type('K', {release: true});
 
             // # Start typing the name of a private channel located above

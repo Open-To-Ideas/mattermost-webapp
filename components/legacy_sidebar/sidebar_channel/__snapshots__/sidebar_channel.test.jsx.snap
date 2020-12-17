@@ -81,7 +81,7 @@ exports[`component/legacy_sidebar/sidebar_channel/SidebarChannel should match sn
     unreadMsgs={0}
   />
   <SidebarTutorialTip
-    offTopicDisplayName="Off-Topic"
+    offTopicDisplayName="Random"
     openLhs={[MockFunction]}
     townSquareDisplayName="Town Square"
   />

@@ -46,11 +46,11 @@ describe('Channel sidebar', () => {
         // * Verify the order is correct to begin with
         cy.get('.SidebarChannel > .SidebarLink').should('be.visible').as('fromChannelSidebarLink');
         cy.get('@fromChannelSidebarLink').eq(0).should('contain', channelName);
-        cy.get('@fromChannelSidebarLink').eq(1).should('contain', 'Off-Topic');
+        cy.get('@fromChannelSidebarLink').eq(1).should('contain', 'Random');
         cy.get('@fromChannelSidebarLink').eq(2).should('contain', 'Town Square');
 
         // # Perform drag using keyboard
-        cy.get('.SidebarChannel:contains(Off-Topic) > .SidebarLink').
+        cy.get('.SidebarChannel:contains(Random) > .SidebarLink').
             trigger('keydown', {keyCode: SpaceKeyCode}).
             trigger('keydown', {keyCode: DownArrowKeyCode, force: true}).wait(TIMEOUTS.THREE_SEC).
             trigger('keydown', {keyCode: SpaceKeyCode, force: true}).wait(TIMEOUTS.THREE_SEC);
@@ -59,7 +59,7 @@ describe('Channel sidebar', () => {
         cy.get('.SidebarChannel > .SidebarLink').as('toChannelSidebarLink');
         cy.get('@toChannelSidebarLink').eq(0).should('contain', channelName);
         cy.get('@toChannelSidebarLink').eq(1).should('contain', 'Town Square');
-        cy.get('@toChannelSidebarLink').eq(2).should('contain', 'Off-Topic');
+        cy.get('@toChannelSidebarLink').eq(2).should('contain', 'Random');
     });
 
     it('should move category to correct place', () => {

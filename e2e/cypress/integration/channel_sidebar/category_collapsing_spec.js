@@ -56,14 +56,14 @@ describe('Channel sidebar', () => {
         cy.get('.SidebarChannelGroupHeader:contains(CHANNELS)').should('be.visible').as('channelsGroup');
 
         // * Verify that both channels are visible when not collapsed
-        cy.get('.SidebarChannel:contains(Off-Topic)').should('be.visible');
+        cy.get('.SidebarChannel:contains(Random)').should('be.visible');
         cy.get('.SidebarChannel:contains(Town Square)').should('be.visible');
 
         // # Click on CHANNELS
         cy.get('@channelsGroup').click();
 
-        // * Verify that Off-Topic is no longer visible but Town Square still is
-        cy.get('.SidebarChannel:contains(Off-Topic)').should('not.be.visible');
+        // * Verify that Random is no longer visible but Town Square still is
+        cy.get('.SidebarChannel:contains(Random)').should('not.be.visible');
         cy.get('.SidebarChannel:contains(Town Square)').should('be.visible');
     });
 
@@ -81,14 +81,14 @@ describe('Channel sidebar', () => {
                 cy.get('.SidebarChannelGroupHeader:contains(CHANNELS)').should('be.visible').as('channelsGroup');
 
                 // * Verify that all channels are visible
-                cy.get('.SidebarChannel:contains(Off-Topic)').should('be.visible');
+                cy.get('.SidebarChannel:contains(Random)').should('be.visible');
                 cy.get('.SidebarChannel:contains(Channel Test)').should('be.visible').should('has.class', 'unread');
 
                 // # Click on CHANNELS
                 cy.get('@channelsGroup').click();
 
-                // * Verify that Off-Topic is no longer visible but Channel Test still is
-                cy.get('.SidebarChannel:contains(Off-Topic)').should('not.be.visible');
+                // * Verify that Random is no longer visible but Channel Test still is
+                cy.get('.SidebarChannel:contains(Random)').should('not.be.visible');
                 cy.get('.SidebarChannel:contains(Channel Test)').should('be.visible');
             });
         });

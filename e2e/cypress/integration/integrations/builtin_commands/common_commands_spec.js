@@ -148,14 +148,14 @@ describe('Integrations', () => {
     });
 
     it('MM-T682 /leave', () => {
-        // # Go to Off-Topic
+        // # Go to Random
         loginAndVisitChannel(user1, `${testTeam.name}/channels/off-topic`);
 
         // # Type "/leave"
         cy.postMessage('/leave');
 
-        // * Verity Off-Topic is not shown in LHS
-        cy.get('#sidebarChannelContainer').should('be.visible').should('not.contain', 'Off-Topic');
+        // * Verity Random is not shown in LHS
+        cy.get('#sidebarChannelContainer').should('be.visible').should('not.contain', 'Random');
 
         // * Verify user is redirected to Town Square
         cy.get('#sidebarChannelContainer').should('be.visible').should('contain', 'Town Square');

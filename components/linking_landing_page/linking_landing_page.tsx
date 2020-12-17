@@ -354,9 +354,9 @@ export default class LinkingLandingPage extends PureComponent<Props, State> {
             <div className='get-app__dialog-body'>
                 {this.renderDialogHeader()}
                 <div className='get-app__buttons'>
-                    <div className='get-app__status'>
+                    {/* <div className='get-app__status'>
                         {this.renderGoNativeAppMessage()}
-                    </div>
+                    </div> */}
                     <div className='get-app__status'>
                         <a
                             href={this.state.location}

@@ -44,7 +44,7 @@ describe('Channel', () => {
         cy.get('#suggestionList').should('be.visible').children().within((el) => {
             cy.wrap(el).eq(0).should('contain', 'My Channels');
             cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
-            cy.wrap(el).eq(2).should('contain', 'Off-Topic');
+            cy.wrap(el).eq(2).should('contain', 'Random');
             cy.wrap(el).eq(3).should('contain', 'Town Square');
             cy.wrap(el).eq(4).should('contain', 'Other Channels');
             cy.wrap(el).eq(5).should('contain', otherChannel.display_name);
@@ -68,7 +68,7 @@ describe('Channel', () => {
             cy.wrap(el).eq(0).should('contain', 'My Channels');
             cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
             cy.wrap(el).eq(2).should('contain', otherChannel.display_name);
-            cy.wrap(el).eq(3).should('contain', 'Off-Topic');
+            cy.wrap(el).eq(3).should('contain', 'Random');
             cy.wrap(el).eq(4).should('contain', 'Town Square');
         });
     });
@@ -92,7 +92,7 @@ describe('Channel', () => {
             cy.get('#suggestionList').should('be.visible').children().within((el) => {
                 cy.wrap(el).eq(0).should('contain', 'My Channels');
                 cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
-                cy.wrap(el).eq(2).should('contain', 'Off-Topic');
+                cy.wrap(el).eq(2).should('contain', 'Random');
                 cy.wrap(el).eq(3).should('contain', 'Town Square');
                 cy.wrap(el).eq(4).should('contain', 'Other Channels');
                 cy.wrap(el).eq(5).should('contain', otherChannel.display_name);

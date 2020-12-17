@@ -48,7 +48,7 @@ describe('Direct messages: redirections', () => {
         closeDirectMessageViaXButton(testUser, firstDMUser, testTeam);
 
         // * Expect to be redirected to off-topic channel, check channel title and url
-        expectActiveChannelToBe('Off-Topic', offTopicChannelUrl);
+        expectActiveChannelToBe('Random', offTopicChannelUrl);
 
         // # From the 'Direct Messages' menu, find the same user as before and send 'hi'
         sendDirectMessageToUser(firstDMUser, 'hi again');
@@ -60,7 +60,7 @@ describe('Direct messages: redirections', () => {
         cy.get('#channelCloseMessage').click();
 
         // * Expect to be redirected to off-topic channel, check channel title and url
-        expectActiveChannelToBe('Off-Topic', offTopicChannelUrl);
+        expectActiveChannelToBe('Random', offTopicChannelUrl);
     });
 
     it('MM-T453_2 Closing a different direct message should not affect active direct message', () => {

@@ -46,8 +46,8 @@ describe('Integrations', () => {
         verifyUserStatus(offline);
 
         // # Switch to off-topic channel
-        cy.findByLabelText('public channels').findByText('Off-Topic').click();
-        cy.findByLabelText('channel header region').findByText('Off-Topic').should('be.visible');
+        cy.findByLabelText('public channels').findByText('Random').click();
+        cy.findByLabelText('channel header region').findByText('Random').should('be.visible');
 
         // # Then switch back to town-square channel again
         cy.findByLabelText('public channels').findByText('Town Square').click();

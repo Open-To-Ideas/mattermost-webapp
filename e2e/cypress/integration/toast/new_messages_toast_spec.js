@@ -51,7 +51,7 @@ describe('Toast', () => {
         cy.get('#sidebarItem_off-topic').should('be.visible').click().wait(TIMEOUTS.HALF_SEC);
 
         // * Verify that off-topic channel is loaded
-        cy.get('#channelIntro').should('be.visible').contains('Beginning of Off-Topic');
+        cy.get('#channelIntro').should('be.visible').contains('Beginning of Random');
         cy.findAllByTestId('postView').should('be.visible');
     });
 
