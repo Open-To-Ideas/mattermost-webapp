@@ -158,8 +158,8 @@ describe('Integrations', () => {
         cy.get('#sidebarChannelContainer').should('be.visible').should('not.contain', 'Random');
 
         // * Verify user is redirected to Town Square
-        cy.get('#sidebarChannelContainer').should('be.visible').should('contain', 'Town Square');
-        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
+        cy.get('#sidebarChannelContainer').should('be.visible').should('contain', 'Inbox');
+        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Inbox');
     });
 
     it('MM-T683 /join', () => {

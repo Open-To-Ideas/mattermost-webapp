@@ -345,7 +345,7 @@ describe('Verify Accessibility Support in Modals & Dialogs', () => {
             cy.get('input').type('town sq', {force: true});
             cy.get('.channels-input__menu').
                 children().should('have.length', 1).
-                eq(0).should('contain', 'Town Square').click();
+                eq(0).should('contain', 'Inbox').click();
         });
 
         // # Click on close button

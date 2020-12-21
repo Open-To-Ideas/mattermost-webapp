@@ -47,7 +47,7 @@ describe('Channel sidebar', () => {
         cy.get('.SidebarChannel > .SidebarLink').should('be.visible').as('fromChannelSidebarLink');
         cy.get('@fromChannelSidebarLink').eq(0).should('contain', channelName);
         cy.get('@fromChannelSidebarLink').eq(1).should('contain', 'Random');
-        cy.get('@fromChannelSidebarLink').eq(2).should('contain', 'Town Square');
+        cy.get('@fromChannelSidebarLink').eq(2).should('contain', 'Inbox');
 
         // # Perform drag using keyboard
         cy.get('.SidebarChannel:contains(Random) > .SidebarLink').
@@ -58,7 +58,7 @@ describe('Channel sidebar', () => {
         // * Verify that the elements have been re-ordered
         cy.get('.SidebarChannel > .SidebarLink').as('toChannelSidebarLink');
         cy.get('@toChannelSidebarLink').eq(0).should('contain', channelName);
-        cy.get('@toChannelSidebarLink').eq(1).should('contain', 'Town Square');
+        cy.get('@toChannelSidebarLink').eq(1).should('contain', 'Inbox');
         cy.get('@toChannelSidebarLink').eq(2).should('contain', 'Random');
     });
 

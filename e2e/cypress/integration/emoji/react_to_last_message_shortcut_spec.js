@@ -51,7 +51,7 @@ describe('Keyboard shortcut for adding reactions to last message in channel or t
         // # Login as test user and visit town-square
         cy.apiLogin(testUser);
         cy.visit(`/${testTeam.name}/channels/town-square`);
-        cy.get('#channelHeaderTitle').should('be.visible').and('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('be.visible').and('contain', 'Inbox');
 
         // # Make sure there is at least a message without reaction for each test
         cy.postMessage(MESSAGES.TINY);
@@ -73,7 +73,7 @@ describe('Keyboard shortcut for adding reactions to last message in channel or t
     it('Should open emoji picker for last message by shortcut in the channel view when the focus is not on the center text box', () => {
         // # Click anywhere to take focus away from center text box
         cy.get('#lhsList').within(() => {
-            cy.findByText('Town Square').click();
+            cy.findByText('Inbox').click();
         });
 
         // # Emulate react to last message shortcut without focus on center
@@ -300,7 +300,7 @@ describe('Keyboard shortcut for adding reactions to last message in channel or t
 
         // # Click anywhere to take focus away from RHS text box
         cy.get('#lhsList').within(() => {
-            cy.findByText('Town Square').click();
+            cy.findByText('Inbox').click();
         });
 
         // # Focus back on Center textbox and enter shortcut
@@ -354,7 +354,7 @@ describe('Keyboard shortcut for adding reactions to last message in channel or t
 
         // # Click anywhere to take focus away from RHS text box
         cy.get('#lhsList').within(() => {
-            cy.findByText('Town Square').click();
+            cy.findByText('Inbox').click();
         });
 
         // # Enter shortcut without focus on Center textbox

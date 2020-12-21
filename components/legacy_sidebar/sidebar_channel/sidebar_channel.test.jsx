@@ -61,7 +61,7 @@ describe('component/legacy_sidebar/sidebar_channel/SidebarChannel', () => {
         currentTeamName: 'current-team',
         currentUserId: 'user-id',
         showTutorialTip: false,
-        townSquareDisplayName: 'Town Square',
+        townSquareDisplayName: 'Inbox',
         offTopicDisplayName: 'Random',
         membersCount: 8,
         showUnreadForMsgs: true,
@@ -159,7 +159,7 @@ describe('component/legacy_sidebar/sidebar_channel/SidebarChannel', () => {
             channelId: 'test',
             channelName: Constants.DEFAULT_CHANNEL,
             channelType: Constants.OPEN_CHANNEL,
-            channelDisplayName: 'Town Square',
+            channelDisplayName: 'Inbox',
         };
         const wrapper = shallowWithIntl(<SidebarChannel {...props}/>);
         expect(wrapper).toMatchSnapshot();

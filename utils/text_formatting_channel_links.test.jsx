@@ -26,7 +26,7 @@ describe('TextFormatting.ChannelLinks', () => {
         test('should link ~town-square', () => {
             expect(
                 TextFormatting.formatText('~town-square', {
-                    channelNamesMap: {'town-square': {display_name: 'Town Square'}},
+                    channelNamesMap: {'town-square': {display_name: 'Inbox'}},
                     team: {name: 'myteam'},
                 }).trim(),
             ).toBe(
@@ -37,7 +37,7 @@ describe('TextFormatting.ChannelLinks', () => {
         test('should link ~town-square followed by a period', () => {
             expect(
                 TextFormatting.formatText('~town-square.', {
-                    channelNamesMap: {'town-square': {display_name: 'Town Square'}},
+                    channelNamesMap: {'town-square': {display_name: 'Inbox'}},
                     team: {name: 'myteam'},
                 }).trim(),
             ).toBe(
@@ -71,7 +71,7 @@ describe('TextFormatting.ChannelLinks', () => {
         test('should link in brackets', () => {
             expect(
                 TextFormatting.formatText('(~town-square)', {
-                    channelNamesMap: {'town-square': {display_name: 'Town Square'}},
+                    channelNamesMap: {'town-square': {display_name: 'Inbox'}},
                     team: {name: 'myteam'},
                 }).trim(),
             ).toBe(
@@ -84,7 +84,7 @@ describe('TextFormatting.ChannelLinks', () => {
         test('should not link when a ~ is in the middle of a word', () => {
             expect(
                 TextFormatting.formatText('aa~town-square', {
-                    channelNamesMap: {'town-square': {display_name: 'Town Square'}},
+                    channelNamesMap: {'town-square': {display_name: 'Inbox'}},
                     team: {name: 'myteam'},
                 }).trim(),
             ).toBe(

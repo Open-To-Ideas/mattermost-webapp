@@ -72,7 +72,7 @@ describe('Test channel public/private toggle', () => {
         cy.visit(`/${testTeam.name}/channels/town-square`);
         cy.getCurrentChannelId().then((id) => {
             cy.visit(`/admin_console/user_management/channels/${id}`);
-            cy.get('#channel_profile').contains('Town Square');
+            cy.get('#channel_profile').contains('Inbox');
             cy.get('#channel_manage .group-teams-and-channels--body').find('button').eq(0).should('have.class', 'false');
             cy.get('#channel_manage .group-teams-and-channels--body').find('button').eq(1).contains('Public');
             cy.get('#channel_manage .group-teams-and-channels--body').find('button').eq(0).should('have.class', 'disabled');

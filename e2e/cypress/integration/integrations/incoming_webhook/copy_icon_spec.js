@@ -32,7 +32,7 @@ describe('Incoming webhook', () => {
     it('MM-T637 Copy icon for Incoming Webhook URL', () => {
         const title = 'test-title';
         const description = 'test-description';
-        const channel = 'Town Square';
+        const channel = 'Inbox';
 
         cy.get('#incomingWebhooks').should('be.visible').click();
 

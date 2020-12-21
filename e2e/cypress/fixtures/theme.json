@@ -1,6 +1,6 @@
 {
     "default": {
-        "sidebarBg":"#145dbf",
+        "sidebarBg":"#5371FF",
         "sidebarText":"#ffffff",
         "sidebarUnreadText":"#ffffff",
         "sidebarTextHoverBg":"#4578bf",
@@ -12,7 +12,7 @@
         "awayIndicator":"#ffbc42",
         "dndIndicator":"#f74343",
         "mentionBj":"#ffffff",
-        "mentionColor":"#145dbf",
+        "mentionColor":"#5371FF",
         "centerChannelBg":"#ffffff",
         "centerChannelColor":"#3d3c40",
         "newMessageSeparator":"#ff8800",

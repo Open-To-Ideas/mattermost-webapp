@@ -59,7 +59,7 @@ function verifyMemberDropdownAction(hasActionItem) {
 
     cy.get('#channelMembersModal').should('be.visible').within(() => {
         // * Verify that the title is correct
-        cy.findByText('Town Square').should('be.visible');
+        cy.findByText('Inbox').should('be.visible');
         cy.findByText('Members').should('be.visible');
 
         // * Check to see any user has dropdown menu

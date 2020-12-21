@@ -22,7 +22,7 @@ storiesOf('Widgets/Inputs', module).
                 const options = [
                     {id: '1', name: 'public', display_name: 'Public Channel', type: 'O'},
                     {id: '2', name: 'private', display_name: 'Private Channel', type: 'P'},
-                    {id: '3', name: 'town-square', display_name: 'Town Square', type: 'O'},
+                    {id: '3', name: 'town-square', display_name: 'Inbox', type: 'O'},
                     {id: '4', name: 'off-topic', display_name: 'Off Topic', type: 'O'},
                 ];
 

@@ -95,7 +95,7 @@ describe('Channel header menu', () => {
             cy.get('#channelLeaveChannel').click();
 
             // * Should now be in Town Square
-            cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Town Square');
+            cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Inbox');
         });
     });
 });

@@ -34,7 +34,7 @@ describe('Toast', () => {
         cy.getLastPostId().then((postId) => {
             // # Jump to link opens on main channel view
             cy.url().should('include', `/${testTeam.name}/channels/town-square/${postId}`);
-            cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Town Square');
+            cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Inbox');
 
             // # Post is highlighted and fades within 6 sec.
             cy.get(`#post_${postId}`).

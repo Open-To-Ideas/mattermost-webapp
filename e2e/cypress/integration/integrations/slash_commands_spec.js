@@ -68,14 +68,14 @@ describe('Integrations', () => {
         cy.get('#submitNewChannel').click();
 
         // # User, who is a member of the channel, try /join command without tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/join ${privateChannelName}`);
 
         // * Private channel should be active
         cy.get('#privateChannelList').get('.active').should('contain', privateChannelName);
 
         // # User, who is a member of the channel, try /join command with tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/join ~${privateChannelName}`);
 
         // * private channel should be active
@@ -86,14 +86,14 @@ describe('Integrations', () => {
         cy.visit(testChannelUrl1);
 
         // # User, who is *not* a member of the channel, try /join command without tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/join ${privateChannelName}`);
 
         // * Error message should be presented.
         cy.getLastPost().should('contain', 'An error occurred while joining the channel.').and('contain', 'System');
 
         // # User, who is *not* a member of the channel, try /join command with tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/join ~${privateChannelName}`);
 
         // * Error message should be presented.
@@ -113,14 +113,14 @@ describe('Integrations', () => {
         cy.get('#submitNewChannel').click();
 
         // # User, who is a member of the channel, try /open command without tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/open ${privateChannelName}`);
 
         // * Private channel should be active
         cy.get('#privateChannelList').get('.active').should('contain', privateChannelName);
 
         // # User, who is a member of the channel, try /open command with tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/open ~${privateChannelName}`);
 
         // * Private channel should be active
@@ -131,14 +131,14 @@ describe('Integrations', () => {
         cy.visit(testChannelUrl1);
 
         // # User, who is *not* a member of the channel, try /open command without tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/open ${privateChannelName}`);
 
         // * Error message should be presented.
         cy.getLastPost().should('contain', 'An error occurred while joining the channel.').and('contain', 'System');
 
         // # User, who is *not* a member of the channel, try /open command with tilde
-        cy.get('#publicChannelList').findByText('Town Square').click();
+        cy.get('#publicChannelList').findByText('Inbox').click();
         cy.postMessage(`/open ~${privateChannelName}`);
 
         // * Error message should be presented.

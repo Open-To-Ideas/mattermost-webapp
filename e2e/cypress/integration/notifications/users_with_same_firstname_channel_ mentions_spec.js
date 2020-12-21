@@ -78,7 +78,7 @@ describe('Notifications', () => {
             // * Check that the display name of the team the user was invited to is being correctly displayed
             cy.get('#headerUsername', {timeout: TIMEOUTS.HALF_MIN}).should('contain.text', firstUser.username);
 
-            // * Check that 'Town Square' is currently being selected
+            // * Check that 'Inbox' is currently being selected
             cy.get('.active').within(() => {
                 cy.get('#sidebarItem_town-square').should('exist');
             });

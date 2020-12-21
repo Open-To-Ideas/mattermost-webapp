@@ -67,7 +67,7 @@ exports[`components/ChannelHeaderMobile/ChannelHeaderMobile should match snapsho
       <Connect(NavbarInfoButton)
         channel={
           Object {
-            "display_name": "Town Square",
+            "display_name": "Inbox",
             "id": "123",
             "name": "town-square",
             "team_id": "team_id",
@@ -79,7 +79,7 @@ exports[`components/ChannelHeaderMobile/ChannelHeaderMobile should match snapsho
       <Connect(MobileChannelHeaderPlug)
         channel={
           Object {
-            "display_name": "Town Square",
+            "display_name": "Inbox",
             "id": "123",
             "name": "town-square",
             "team_id": "team_id",

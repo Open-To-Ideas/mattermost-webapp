@@ -52,7 +52,7 @@ describe('Multi-user group messages', () => {
         cy.findByText('Close Group Message').should('be.visible').click();
 
         // * Validate that GM is closed and we are redirected
-        expectActiveChannelToBe('Town Square', '/town-square');
+        expectActiveChannelToBe('Inbox', '/town-square');
     });
 });
 

@@ -49,7 +49,7 @@ describe('Channel sidebar', () => {
         cy.get('.SidebarChannel:contains(Town Square)').should('be.visible').click();
 
         // * Verify that the channel changed
-        verifyChannelSwitch('Town Square', `/${teamName}/channels/town-square`);
+        verifyChannelSwitch('Inbox', `/${teamName}/channels/town-square`);
     });
 
     it('should mark channel as read and unread in sidebar', () => {
@@ -93,7 +93,7 @@ describe('Channel sidebar', () => {
         cy.get('#channelLeaveChannel').should('be.visible').click();
 
         // * Verify that we've switched to Town Square
-        verifyChannelSwitch('Town Square', `/${teamName}/channels/town-square`);
+        verifyChannelSwitch('Inbox', `/${teamName}/channels/town-square`);
 
         // * Verify that Off Topic has disappeared from the sidebar
         cy.get('.SidebarChannel:contains(Random)').should('not.exist');
@@ -119,7 +119,7 @@ describe('Channel sidebar', () => {
         cy.get('#deleteChannelModalDeleteButton').should('be.visible').click();
 
         // * Verify that we've switched to Town Square
-        verifyChannelSwitch('Town Square', `/${teamName}/channels/town-square`);
+        verifyChannelSwitch('Inbox', `/${teamName}/channels/town-square`);
 
         // * Verify that Off Topic has disappeared from the sidebar
         cy.get('.SidebarChannel:contains(Random)').should('not.exist');

@@ -30,7 +30,7 @@ describe('components/user_settings/ImportThemeModal', () => {
             dndIndicator: '#f74343',
             mentionBg: '#eb4d5c',
             mentionBj: '#ffffff',
-            mentionColor: '#145dbf',
+            mentionColor: '#5371FF',
             centerChannelBg: '#ffffff',
             centerChannelColor: '#3d3c40',
             newMessageSeparator: '#ff8800',

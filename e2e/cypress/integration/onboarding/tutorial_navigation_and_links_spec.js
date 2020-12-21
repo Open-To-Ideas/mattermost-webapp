@@ -174,7 +174,7 @@ function checkOffTopicChannel() {
 */
 
 function checkTownSquare() {
-    cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Town Square');
+    cy.get('#channelHeaderInfo').should('be.visible').and('contain', 'Inbox');
     cy.get('#post_textbox').should('be.visible');
 }
 

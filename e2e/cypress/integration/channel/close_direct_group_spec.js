@@ -15,7 +15,7 @@
 // sidebar
 function verifyChannelWasProperlyClosed(channelName) {
     // * Make sure that we have switched channels
-    cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+    cy.get('#channelHeaderTitle').should('contain', 'Inbox');
 
     // * Make sure the old DM no longer exists
     cy.get('#sidebarItem_' + channelName).should('not.exist');

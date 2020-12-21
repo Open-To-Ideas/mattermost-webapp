@@ -621,7 +621,7 @@ class LoginController extends React.PureComponent {
                     <span>
                         <FormattedMessage
                             id='login.noAccount'
-                            defaultMessage="Don't have an account? "
+                            defaultMessage="Don't have an account?? "
                         />
                         <Link
                             id='signup'

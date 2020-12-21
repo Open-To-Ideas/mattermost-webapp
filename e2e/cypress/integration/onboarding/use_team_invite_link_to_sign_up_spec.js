@@ -106,7 +106,7 @@ describe('Onboarding', () => {
         // * Check that the display name of the team the user sucessfully joined is correct
         cy.get('#headerTeamName').should('contain.text', testTeam.display_name);
 
-        // * Check that 'Town Square' is currently being selected
+        // * Check that 'Inbox' is currently being selected
         cy.get('.active').within(() => {
             cy.get('#sidebarItem_town-square').should('exist');
         });

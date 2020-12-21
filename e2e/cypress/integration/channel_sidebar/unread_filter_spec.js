@@ -105,7 +105,7 @@ describe('Channel sidebar unread filter', () => {
 
         // # Switch to the town square
         cy.get('#sidebarItem_town-square').click();
-        cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('contain', 'Inbox');
 
         // * Verify that the Town Square is not unread
         cy.get('#sidebarItem_town-square').should('be.visible').should(beRead);

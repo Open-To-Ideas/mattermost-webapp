@@ -63,7 +63,7 @@ describe('Onboarding', () => {
         // * Check that the display name of the team the user was invited to is being correctly displayed
         cy.get('#headerTeamName', {timeout: TIMEOUTS.HALF_MIN}).should('contain.text', testTeam.display_name);
 
-        // * Check that 'Town Square' is currently being selected
+        // * Check that 'Inbox' is currently being selected
         cy.get('.active').within(() => {
             cy.get('#sidebarItem_town-square').should('exist');
         });
@@ -104,7 +104,7 @@ describe('Onboarding', () => {
         // # Reload the page without cache
         cy.reload(true);
 
-        // * Check that 'Town Square' is currently being selected
+        // * Check that 'Inbox' is currently being selected
         cy.get('.active', {timeout: TIMEOUTS.HALF_MIN}).within(() => {
             cy.get('#sidebarItem_town-square').should('exist');
         });

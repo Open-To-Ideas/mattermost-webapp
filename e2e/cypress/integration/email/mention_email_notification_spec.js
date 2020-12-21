@@ -61,7 +61,7 @@ describe('Email notification', () => {
         const mailUrl = getEmailUrl(baseUrl);
 
         cy.task('getRecentEmail', {username: mentionedUser.username, mailUrl}).then((response) => {
-            verifyEmailNotification(response, config.TeamSettings.SiteName, testTeam.display_name, 'Town Square', mentionedUser, testUser, text, config.EmailSettings.FeedbackEmail, config.SupportSettings.SupportEmail);
+            verifyEmailNotification(response, config.TeamSettings.SiteName, testTeam.display_name, 'Inbox', mentionedUser, testUser, text, config.EmailSettings.FeedbackEmail, config.SupportSettings.SupportEmail);
 
             const bodyText = splitEmailBodyText(response.data.body.text);
 

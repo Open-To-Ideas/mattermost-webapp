@@ -252,7 +252,7 @@ describe('Guest Account - Member Invitation Flow', () => {
         // * Verify if user has access to the default channels
         cy.get('#sidebarChannelContainer').within(() => {
             cy.findByText('Random').should('be.visible');
-            cy.findByText('Town Square').should('be.visible');
+            cy.findByText('Inbox').should('be.visible');
         });
     });
 
@@ -287,7 +287,7 @@ describe('Guest Account - Member Invitation Flow', () => {
             // * Verify if user has access to the default channels in the invited teams
             cy.get('#sidebarChannelContainer').within(() => {
                 cy.findByText('Random').should('be.visible');
-                cy.findByText('Town Square').should('be.visible');
+                cy.findByText('Inbox').should('be.visible');
             });
         });
     });

@@ -47,7 +47,7 @@ describe('Integrations', () => {
             });
 
             // # Go back to town-square channel
-            cy.contains('.sidebar-item', 'Town Square').click();
+            cy.contains('.sidebar-item', 'Inbox').click();
         }
 
         loginAndVisitChannel(testUser, townSquareUrl);

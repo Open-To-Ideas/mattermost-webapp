@@ -74,7 +74,7 @@ describe('Channel sidebar', () => {
         cy.get('#channelLeaveChannel').click();
 
         // * Verify that we've switched to Town Square
-        cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('contain', 'Inbox');
         cy.url().should('include', `/${teamName}/channels/town-square`);
 
         // # Click the New Channel Dropdown button

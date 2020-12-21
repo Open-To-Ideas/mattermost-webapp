@@ -35,7 +35,7 @@ describe('Handle removed user - old sidebar', () => {
         removeMeFromCurrentChannel().then(() => {
             // * Verify that the channel changed back to Town Square and that Random has been removed
             cy.url().should('include', `/${teamName}/channels/town-square`);
-            cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
+            cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Inbox');
             cy.get(`${sidebarItemClass}:contains(Random)`).should('not.exist');
         });
     });

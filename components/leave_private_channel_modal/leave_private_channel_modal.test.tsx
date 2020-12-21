@@ -49,7 +49,7 @@ describe('components/LeavePrivateChannelModal', () => {
         'town-square': {
             id: 'town-square-id',
             name: 'town-square',
-            display_name: 'Town Square',
+            display_name: 'Inbox',
             type: ('O' as ChannelType),
             team_id: 'team-1',
             header: '',

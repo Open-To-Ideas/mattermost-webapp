@@ -17,7 +17,7 @@ describe('Recent Emoji', () => {
         // # Login as test user and visit town-square
         cy.apiInitSetup({loginAfter: true}).then(({team}) => {
             cy.visit(`/${team.name}/channels/town-square`);
-            cy.get('#channelHeaderTitle').should('be.visible').and('contain', 'Town Square');
+            cy.get('#channelHeaderTitle').should('be.visible').and('contain', 'Inbox');
             cy.postMessage('hello');
         });
     });

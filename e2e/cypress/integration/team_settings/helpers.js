@@ -76,7 +76,7 @@ export const signupAndVerifyTutorial = (username, password, teamDisplayName) => 
     cy.get('#tutorialIntroOne').findByText('Welcome to:').should('be.visible');
     cy.get('#tutorialIntroOne').findByText('Mattermost').should('be.visible');
 
-    // * Check that 'Town Square' is currently being selected
+    // * Check that 'Inbox' is currently being selected
     cy.get('.active').within(() => {
         cy.get('#sidebarItem_town-square').should('exist');
     });

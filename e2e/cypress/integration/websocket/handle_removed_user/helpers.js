@@ -39,7 +39,7 @@ export function verifyRHS(teamName, sidebarItemClass, postId) {
 
     // * Verify that the channel changed back to Town Square
     cy.url().should('include', `/${teamName}/channels/town-square`);
-    cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
+    cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Inbox');
 
     // * Verify that Random has been removed
     cy.get(`${sidebarItemClass}:contains(Random)`).should('not.exist');

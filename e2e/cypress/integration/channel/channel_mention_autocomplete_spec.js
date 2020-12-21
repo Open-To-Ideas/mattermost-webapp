@@ -45,7 +45,7 @@ describe('Channel', () => {
             cy.wrap(el).eq(0).should('contain', 'My Channels');
             cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
             cy.wrap(el).eq(2).should('contain', 'Random');
-            cy.wrap(el).eq(3).should('contain', 'Town Square');
+            cy.wrap(el).eq(3).should('contain', 'Inbox');
             cy.wrap(el).eq(4).should('contain', 'Other Channels');
             cy.wrap(el).eq(5).should('contain', otherChannel.display_name);
         });
@@ -69,7 +69,7 @@ describe('Channel', () => {
             cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
             cy.wrap(el).eq(2).should('contain', otherChannel.display_name);
             cy.wrap(el).eq(3).should('contain', 'Random');
-            cy.wrap(el).eq(4).should('contain', 'Town Square');
+            cy.wrap(el).eq(4).should('contain', 'Inbox');
         });
     });
 
@@ -93,7 +93,7 @@ describe('Channel', () => {
                 cy.wrap(el).eq(0).should('contain', 'My Channels');
                 cy.wrap(el).eq(1).should('contain', ownChannel.display_name);
                 cy.wrap(el).eq(2).should('contain', 'Random');
-                cy.wrap(el).eq(3).should('contain', 'Town Square');
+                cy.wrap(el).eq(3).should('contain', 'Inbox');
                 cy.wrap(el).eq(4).should('contain', 'Other Channels');
                 cy.wrap(el).eq(5).should('contain', otherChannel.display_name);
             });

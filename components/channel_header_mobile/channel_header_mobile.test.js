@@ -48,7 +48,7 @@ describe('components/ChannelHeaderMobile/ChannelHeaderMobile', () => {
     test('should match snapshot, for default channel', () => {
         const props = {
             ...baseProps,
-            channel: {type: 'O', id: '123', name: 'town-square', display_name: 'Town Square', team_id: 'team_id'},
+            channel: {type: 'O', id: '123', name: 'town-square', display_name: 'Inbox', team_id: 'team_id'},
         };
         const wrapper = shallow(
             <ChannelHeaderMobile {...props}/>,

@@ -50,7 +50,7 @@ describe('Leave an archived channel', () => {
         createArchivedChannel({prefix: 'archive-to-be-left-'}, ['Leaving this channel']).then(({channelName}) => {
             // # Switch to another channel
             cy.visit(`/${testTeam.name}/channels/town-square`);
-            cy.contains('#channelHeaderTitle', 'Town Square').should('be.visible');
+            cy.contains('#channelHeaderTitle', 'Inbox').should('be.visible');
 
             // # Switch back to the archived channel
             cy.visit(`/${testTeam.name}/channels/${channelName}`);
@@ -61,7 +61,7 @@ describe('Leave an archived channel', () => {
             cy.get('#channelLeaveChannel').click();
 
             // * Verify sure that we have switched channels
-            cy.contains('#channelHeaderTitle', 'Town Square').should('be.visible');
+            cy.contains('#channelHeaderTitle', 'Inbox').should('be.visible');
         });
     });
 

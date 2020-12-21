@@ -375,7 +375,7 @@ export default class LinkingLandingPage extends PureComponent<Props, State> {
                         </a>
                     </div>
                 </div>
-                <div className='get-app__preference'>
+                {/* <div className='get-app__preference'>
                     <button
                         className={`get-app__checkbox ${this.state.rememberChecked ? 'checked' : ''}`}
                         onClick={this.handleChecked}
@@ -386,8 +386,8 @@ export default class LinkingLandingPage extends PureComponent<Props, State> {
                         id='get_app.rememberMyPreference'
                         defaultMessage='Remember my preference'
                     />
-                </div>
-                {this.renderDownloadLinkSection()}
+                </div> */}
+                {/* {this.renderDownloadLinkSection()} */}
             </div>
         );
     }

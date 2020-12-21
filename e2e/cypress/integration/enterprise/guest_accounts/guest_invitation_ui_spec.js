@@ -101,7 +101,7 @@ describe('Guest Account - Guest User Invitation Flow', () => {
             cy.get('input').type('town sq', {force: true});
             cy.get('.channels-input__menu').
                 children().should('have.length', 1).
-                eq(0).should('contain', 'Town Square').click();
+                eq(0).should('contain', 'Inbox').click();
         });
 
         // * Verify Set Custom Message before clicking on the link
@@ -175,7 +175,7 @@ describe('Guest Account - Guest User Invitation Flow', () => {
         cy.reload();
 
         const email = `temp-${getRandomId()}@mattermost.com`;
-        invitePeople(email, 1, email, 'Town Square', false);
+        invitePeople(email, 1, email, 'Inbox', false);
 
         // * Verify Invite Guests button is disabled
         cy.get('#inviteGuestButton').should('be.disabled');
@@ -245,7 +245,7 @@ describe('Guest Account - Guest User Invitation Flow', () => {
         // * Verify the channel is preselected
         cy.findByTestId('channelPlaceholder').should('be.visible').within(() => {
             cy.get('.public-channel-icon').should('be.visible');
-            cy.findByText('Town Square').should('be.visible');
+            cy.findByText('Inbox').should('be.visible');
         });
 
         // * Verify the email field is empty

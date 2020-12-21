@@ -41,7 +41,7 @@ describe('Channel routing', () => {
 
     it('should go to town square channel view', () => {
         // * Check if the channel is loaded correctly
-        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Inbox');
     });
 
     it('should go to private channel view', () => {

@@ -68,7 +68,7 @@ exports[`component/legacy_sidebar/sidebar_channel/SidebarChannel should match sn
     channelName="town-square"
     channelStatus="test"
     channelType="O"
-    displayName="Town Square"
+    displayName="Inbox"
     handleClose={null}
     hasDraft={false}
     link="/current-team/channels/town-square"
@@ -83,7 +83,7 @@ exports[`component/legacy_sidebar/sidebar_channel/SidebarChannel should match sn
   <SidebarTutorialTip
     offTopicDisplayName="Random"
     openLhs={[MockFunction]}
-    townSquareDisplayName="Town Square"
+    townSquareDisplayName="Inbox"
   />
 </li>
 `;

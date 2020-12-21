@@ -42,7 +42,7 @@ describe('Sidebar channel menu', () => {
     it('MM-T3349_1 should be able to mark a channel as read', () => {
         // # Start in Town Square
         cy.get('#sidebarItem_town-square').click();
-        cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('contain', 'Inbox');
 
         // # Save the ID of the Town Square channel for later
         cy.getCurrentChannelId().as('townSquareId');

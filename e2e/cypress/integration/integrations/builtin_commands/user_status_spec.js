@@ -50,8 +50,8 @@ describe('Integrations', () => {
         cy.findByLabelText('channel header region').findByText('Random').should('be.visible');
 
         // # Then switch back to town-square channel again
-        cy.findByLabelText('public channels').findByText('Town Square').click();
-        cy.findByLabelText('channel header region').findByText('Town Square').should('be.visible');
+        cy.findByLabelText('public channels').findByText('Inbox').click();
+        cy.findByLabelText('channel header region').findByText('Inbox').should('be.visible');
 
         // * Should not appear "New Messages" line
         cy.findByText('New Messages').should('not.exist');

@@ -54,7 +54,7 @@ describe('Channel switching', () => {
 
         // * Verify that the channel changed to the Town Square
         cy.url().should('include', `/${teamName}/channels/town-square`);
-        cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('contain', 'Inbox');
     });
 
     it('should switch to unread channels when pressing the alt + shift + arrow hotkeys', () => {
@@ -94,7 +94,7 @@ describe('Channel switching', () => {
 
         // * Verify that the channel changed back to Town Square and skipped Off Topic
         cy.url().should('include', `/${teamName}/channels/town-square`);
-        cy.get('#channelHeaderTitle').should('contain', 'Town Square');
+        cy.get('#channelHeaderTitle').should('contain', 'Inbox');
     });
 
     it('should open and close channel switcher on ctrl/cmd + k', () => {

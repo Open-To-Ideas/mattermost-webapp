@@ -55,7 +55,7 @@ jest.mock('mattermost-redux/selectors/entities/utils', () => ({
 
 describe('channel view actions', () => {
     const channel1 = {id: 'channelid1', name: 'channel1', display_name: 'Channel 1', type: 'O', team_id: 'teamid1'};
-    const townsquare = {id: 'channelid2', name: General.DEFAULT_CHANNEL, display_name: 'Town Square', type: 'O', team_id: 'teamid1'};
+    const townsquare = {id: 'channelid2', name: General.DEFAULT_CHANNEL, display_name: 'Inbox', type: 'O', team_id: 'teamid1'};
     const gmChannel = {id: 'gmchannelid', name: 'gmchannel', display_name: 'GM Channel 1', type: 'G'};
     const team1 = {id: 'teamid1', name: 'team1'};
 

@@ -41,7 +41,7 @@ describe('Handle removed user - new sidebar', () => {
         removeMeFromCurrentChannel().then(() => {
             // * Verify that the channel changed back to Town Square
             cy.url().should('include', `/${teamName}/channels/town-square`);
-            cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Town Square');
+            cy.get('#channelHeaderTitle').should('be.visible').should('contain', 'Inbox');
         });
     });
 

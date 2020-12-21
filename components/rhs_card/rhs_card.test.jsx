@@ -17,7 +17,7 @@ describe('comoponents/rhs_card/RhsCard', () => {
     const currentChannel = {
         id: '111',
         name: 'town-square',
-        display_name: 'Town Square',
+        display_name: 'Inbox',
     };
 
     it('should match when no post is selected', () => {

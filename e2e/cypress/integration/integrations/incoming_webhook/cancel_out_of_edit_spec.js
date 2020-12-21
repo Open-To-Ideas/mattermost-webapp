@@ -36,7 +36,7 @@ describe('Integrations', () => {
         cy.findByText('Edit').click();
         cy.get('#displayName').type('name changed');
         cy.get('#description').type('description changed ');
-        cy.get('#channelSelect').select('Town Square');
+        cy.get('#channelSelect').select('Inbox');
         cy.get('#channelLocked').uncheck();
 
         //# Click cancel to cancel the edits

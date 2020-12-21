@@ -975,7 +975,7 @@ export const Constants = {
     SCROLL_DELAY: 2000,
     SCROLL_PAGE_FRACTION: 3,
     DEFAULT_CHANNEL: 'town-square',
-    DEFAULT_CHANNEL_UI_NAME: 'Town Square',
+    DEFAULT_CHANNEL_UI_NAME: 'Inbox',
     OFFTOPIC_CHANNEL: 'off-topic',
     OFFTOPIC_CHANNEL_UI_NAME: 'Random',
     GITLAB_SERVICE: 'gitlab',
@@ -1048,7 +1048,7 @@ export const Constants = {
     THEMES: {
         default: {
             type: 'Mattermost',
-            sidebarBg: '#145dbf',
+            sidebarBg: '#5371ff',
             sidebarText: '#ffffff',
             sidebarUnreadText: '#ffffff',
             sidebarTextHoverBg: '#4578bf',
@@ -1060,7 +1060,7 @@ export const Constants = {
             awayIndicator: '#ffbc42',
             dndIndicator: '#f74343',
             mentionBg: '#ffffff',
-            mentionColor: '#145dbf',
+            mentionColor: '#5371FF',
             centerChannelBg: '#ffffff',
             centerChannelColor: '#3d3c40',
             newMessageSeparator: '#ff8800',
